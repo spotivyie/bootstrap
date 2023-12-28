@@ -14,26 +14,42 @@ h1{
 
 .container{
     margin-top: 10px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.conteudo{
+    grid-template-columns: 2fr 2fr 2fr;
 }
 
 @media screen and (max-width: 767px){
-    .card img{
-        max-width: 100%;
+    div#name {
+        width: 320px;
     }
-    
+
+    .card {
+        height: 520px;
+    }
+
     .row{
         flex-direction: column;
-        width: 320%;
+        align-items: center;
     }
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
-    .row{
-        flex-direction: column;
-        width: 500%;
-    
+    div#name {
+        width: 360px;
+    }
+
+    .card {
+        height: 500px;
+    }
+
+    .row {
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: 2fr 2fr;
+        align-items: center;
     }
 }
